@@ -27,3 +27,9 @@ spec:
           envFrom:
             - configMapRef:
                 name: synergychat-api-configmap
+          env:
+            - name: CRAWLER_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: synergychat-api-configmap
+                  key: CRAWLER_BASE_URL
